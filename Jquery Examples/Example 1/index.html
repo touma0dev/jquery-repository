@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+ 
+<body>
+
+    <h2>CALCULATOR</h2>
+    <p>Num<input type="number" placeholder="0" id="v1"></p>
+    <p>Num<input type="number" placeholder="0" id="v2"></p>
+    <p>Result <input type="number" placeholder="0" id="result"></p>
+    <button id="res">jquery</button>
+    <button id="cal">Js</button>
+    <script>
+var cal=document.getElementById("cal");
+   cal.addEventListener("click",()=>{
+            let num1=Number(document.getElementById("v1").value)
+            let num2=Number(document.getElementById("v2").value)
+            let result=num1+num2
+            document.getElementById("result").value=result;
+        })
+
+//Jquery
+$("#res").click(()=>{
+    console.log(`clicou`)
+    let v1=Number($("#v1").val())
+    let v2=Number($("#v2").val())
+    let res=v1+v2
+    $("#result").val(res);
+});
+
+    </script>
+</body> 
+</html>
