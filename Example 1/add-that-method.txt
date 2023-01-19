@@ -1,0 +1,13 @@
+additin that method you can use your code in external part
+// <SCRIPt src="/Example 1/index.js"></SCRIPt>
+
+// using mehtod $(document)...
+$(document).ready(()=>{
+    $("#res").click(()=>{
+        console.log(`clicou`)
+        let v1=Number($("#v1").val())
+        let v2=Number($("#v2").val())
+        let res=v1+v2
+        $("#result").val(res);
+    });
+})
