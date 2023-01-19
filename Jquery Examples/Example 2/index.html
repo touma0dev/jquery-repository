@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Example 2</title>
+</head>
+<style>
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.block{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.text p{
+    color:red;
+    font-size: 30pt;
+
+}</style>
+<body>
+    <div class="block">
+        <div class="text">
+            <p id="function"></p>
+        </div>
+    </div>
+    <script>
+        const block=$('.block')
+        const text=$("#function")
+        $(block).click(()=>{
+            block.css('background-color','black')
+            $(text).text(" OUT").css('color','red')
+
+            $(text).text("CLICK")
+            
+        });
+
+        $(block).mouseenter(()=>{
+            block.css('background-color','')
+            $(text).text("IN").css('color','white')
+            
+        });
+          $(block).mouseleave(()=>{
+            block.css('background-color','red')
+            $(text).text(" OUT").css('color','#fff')
+        });
+
+    </script>
+</body>
+</html>
